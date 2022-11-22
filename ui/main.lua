@@ -1,4 +1,3 @@
-local CoreGui = game:GetService("CoreGui")
 local UserInput = game:GetService("UserInputService")
 local HttpService = game:GetService("HttpService")
 
@@ -105,7 +104,7 @@ else
 		syn.protect_gui(Interface)
 	end
 
-	Interface.Parent = CoreGui
+	Interface.Parent = game:GetService("CoreGui"):FindFirstChild("RobloxGui")
 end
 
 return Interface
