@@ -1,3 +1,4 @@
+local CoreGui = game:GetService("CoreGui")
 local UserInput = game:GetService("UserInputService")
 local HttpService = game:GetService("HttpService")
 
@@ -96,6 +97,8 @@ Collapse.MouseButton1Click:Connect(function()
 	Open:TweenPosition(constants.reveal, "Out", "Quad", 0.15)
 end)
 
+MessageBox.Show("Welcome to Hydroxide", "This is not a finished product\n\nUPDATE: 1/8/22\nMy Discord account has been terminated, which means the status of the current Discord server is now in limbo. I have no plans to create a new server right now, but I do plan to in the near future.", MessageType.OK)
+
 Interface.Name = HttpService:GenerateGUID(false)
 if getHui then
 	Interface.Parent = getHui()
@@ -104,7 +107,7 @@ else
 		syn.protect_gui(Interface)
 	end
 
-	Interface.Parent = game:GetService("CoreGui"):FindFirstChild("RobloxGui")
+	Interface.Parent = CoreGui
 end
 
 return Interface
